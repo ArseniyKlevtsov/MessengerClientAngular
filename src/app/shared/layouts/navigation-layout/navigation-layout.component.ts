@@ -30,8 +30,7 @@ export class NavigationLayoutComponent {
   }
 
   menuItems = [
-    { url: '/smallMatrixSolver', name: 'Small Matrix' },
-    { url: '/bigMatrixSolver', name: 'Big Matrix' },
-    { url: '/savedTasks', name: 'Saved big matrix tasks' },
+    { url: '/login', name: 'login' },
+    { url: '/register', name: 'registeration' },
   ];
 }

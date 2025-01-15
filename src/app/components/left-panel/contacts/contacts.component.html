@@ -1,0 +1,8 @@
+<button (click)="onAddClicked()" class="profile-button">+ контакт</button>
+
+<div>
+    <h2>Контакты</h2>
+    <div *ngFor="let contact of contacts.Contacts">
+        <app-contact-container [contact]="contact"></app-contact-container>
+    </div>
+</div>

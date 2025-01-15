@@ -37,6 +37,7 @@ export class WebsocetMessengerService implements OnDestroy {
     this.socket.onopen = (event) => {
       console.log('Connected to WebSocket:', event);
       this.onOpen.next(event);
+      this.isConnected = true;
     };
 
     this.socket.onmessage = (event) => {

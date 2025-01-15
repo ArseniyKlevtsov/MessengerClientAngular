@@ -1,0 +1,19 @@
+.main-container {
+    display: flex; /* Используем flexbox для горизонтального расположения */
+    height: 100vh; /* Высота на весь экран */
+  }
+  
+  .sidebar {
+    width: 20%; /* 20% ширины */
+    background-color: #2c3e50; /* Темный цвет для панели 1 */
+    color: white; /* Цвет текста */
+    padding: 20px; /* Отступы */
+    min-width: 200px;
+  }
+  
+  .content {
+    width: 80%; /* 80% ширины */
+    background-color: #34495e; /* Более светлый темный цвет для панели 2 */
+    color: white; /* Цвет текста */
+    padding: 20px; /* Отступы */
+  }

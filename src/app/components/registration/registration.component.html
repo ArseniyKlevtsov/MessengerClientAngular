@@ -1,8 +1,8 @@
 <div class="container">
     <div class="card mt-5">
       <div class="card-body">
-        <h2 class="card-title text-center">Вход</h2>
-        <form #loginForm="ngForm" (ngSubmit)="handleLogin(loginForm)">
+        <h2 class="card-title text-center">Регистрация</h2>
+        <form #registrationForm="ngForm" (ngSubmit)="handleRegister(registrationForm)">
           <div class="mb-3">
             <input
               type="text"
@@ -23,10 +23,20 @@
               [(ngModel)]="password"
             />
           </div>
+          <div class="mb-3">
+            <input
+              type="password"
+              placeholder="Подтвердите пароль"
+              name="confirmPassword"
+              required
+              class="form-control"
+              [(ngModel)]="confirmPassword"
+            />
+          </div>
           <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
           <div class="d-flex justify-content-between">
-              <button type="button" class="btn btn-primary" (click)="handleRegister()">Регистрация</button>
-            <button type="submit" class="btn btn-success " [disabled]="requestSended">Войти</button>
+            <button type="button" class="btn btn-primary" (click)="handleLogin()">Войти</button>
+            <button type="submit" class="btn btn-success" [disabled]="requestSended">Регистрация</button>
           </div>
         </form>
       </div>

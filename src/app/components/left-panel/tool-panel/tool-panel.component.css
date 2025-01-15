@@ -1,0 +1,35 @@
+.toolpanel {
+    height: 100px; /* Фиксированная высота */
+    background-color: rgba(44, 62, 80, 0.8); /* Прозрачный темный фон */
+    display: flex;
+    flex-direction: column;
+
+    position: relative; /* Для абсолютного позиционирования, если понадобится */
+    margin-bottom: 20px;
+  }
+  
+  .dropdown {
+    margin-bottom: 10px; /* Отступ между выпадающим списком и кнопкой */
+    padding: 10px; /* Отступ внутри выпадающего списка */
+    background-color: #34495e; /* Цвет фона для выпадающего списка */
+    color: white; /* Цвет текста */
+    border: none; /* Без рамки */
+    border-radius: 5px; /* Закругление углов */
+  }
+  
+  .dropdown:focus {
+    outline: none; /* Убираем стандартное выделение */
+  }
+  
+  .profile-button {
+    padding: 10px 20px; /* Отступы для кнопки */
+    background-color: #2980b9; /* Цвет фона кнопки */
+    color: white; /* Цвет текста */
+    border: none; /* Без рамки */
+    border-radius: 5px; /* Закругление углов */
+    cursor: pointer; /* Указатель курсора */
+  }
+  
+  .profile-button:hover {
+    background-color: #3498db; /* Цвет кнопки при наведении */
+  }

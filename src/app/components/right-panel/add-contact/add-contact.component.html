@@ -1,0 +1,11 @@
+<div class="add-contact-container">
+    <h2>Добавить Контакт</h2>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" formControlName="name" placeholder="Введите имя" class="input-field">
+      </div>
+      <button type="submit" class="add-button" [disabled]="contactForm.invalid">Добавить</button>
+      <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+    </form>
+  </div>

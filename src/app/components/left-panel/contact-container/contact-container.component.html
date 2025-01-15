@@ -1,0 +1,13 @@
+<div class="contact-container">
+  <div class="contact-image">
+    <img *ngIf="contact.IconUrl; else noImage" [src]="contact.IconUrl" alt="{{ contact.Name }}" />
+    <ng-template #noImage>
+      <div class="placeholder"></div>
+    </ng-template>
+  </div>
+  <div class="contact-info">
+    <h3>{{ contact.Name }}</h3>
+    <p class="status">{{ contact.Status }}</p>
+  </div>
+  <p *ngIf="contact.IsBlocked" class="blocked-message">Заблокирован</p>
+</div>
