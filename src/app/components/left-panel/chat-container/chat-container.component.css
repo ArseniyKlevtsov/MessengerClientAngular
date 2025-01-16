@@ -1,0 +1,68 @@
+.chat-container {
+    display: flex;
+    align-items: center;
+    background-color: #333; /* Тёмный фон */
+    color: #fff; /* Белый текст */
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px 0;
+  }
+  
+  .chat-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+  }
+  
+  .chat-image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #e0e0e0; /* Светло-серый фон для отсутствующего изображения */
+  }
+  
+  .chat-info {
+    flex-grow: 1;
+  }
+  
+  .chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .chat-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+  }
+  
+  .last-message {
+    color: #ccc; /* Светло-серый цвет для текста сообщения */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 200px; /* Максимальная ширина для сообщения */
+  }
+  
+  .status {
+    font-size: 0.9em; /* Меньший шрифт для статуса */
+    color: #888; /* Серый цвет для статуса */
+  }
+  
+  .message-status {
+    font-size: 0.8em; /* Меньший шрифт для статуса сообщения */
+    color: #aaa; /* Серый цвет для статуса сообщения */
+  }
+  .sent-at {
+    font-size: 0.8em; /* Меньший шрифт для времени */
+    color: #aaa; /* Серый цвет для времени */
+    margin-left: 10px; /* Отступ слева */
+  }

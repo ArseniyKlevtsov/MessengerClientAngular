@@ -1,0 +1,82 @@
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Занимает всю высоту родителя */
+    padding: 15px;
+    background-color: #2c2f33; /* Тёмный фон */
+    color: #fff; /* Белый текст */
+    border-radius: 8px;
+  }
+  
+  .messages-list {
+    flex-grow: 1; /* Занимает всю доступную высоту */
+    overflow-y: auto; /* Прокрутка для длинных сообщений */
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #1c1f21; /* Цвет фона для сообщений */
+    border-radius: 4px;
+  }
+  
+  .message-item {
+    margin-bottom: 10px;
+    padding: 8px;
+    background-color: #444; /* Цвет фона для отдельных сообщений */
+    border-radius: 4px;
+  }
+  
+  .media-upload {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  
+  .media-item {
+    background-color: #444; /* Цвет фона для медиа */
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .message-input-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .message-input {
+    flex-grow: 1;
+    border: 1px solid #555; /* Рамка для поля ввода */
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #444; /* Цвет фона для поля ввода */
+    color: #fff; /* Белый текст */
+    resize: none; /* Отключаем возможность изменения размера */
+  }
+  
+  .send-button {
+    background-color: #7289da; /* Цвет кнопки отправки */
+    color: #fff; /* Белый текст */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .send-button:hover {
+    background-color: #5a6e9e; /* Цвет кнопки при наведении */
+  }
+  
+  .add-media-button {
+    background-color: #34b7f1; /* Цвет кнопки добавления медиа */
+    color: #fff; /* Белый текст */
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .add-media-button:hover {
+    background-color: #25a0db; /* Цвет кнопки добавления медиа при наведении */
+  }

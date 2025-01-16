@@ -52,6 +52,7 @@ export class LoginComponent {
 
   SuccesLoginHandler(message: Message): void {
     this.authStorageService.setAuthData(message.Dto.UserName, message.Dto.Password)
+    this.websocketService.Associate();
     this.router.navigate(['/main']);
   }
 

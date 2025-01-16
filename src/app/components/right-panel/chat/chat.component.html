@@ -1,1 +1,23 @@
-<p>chat works!</p>
+<div class="chat-container">
+    <p>Чат: {{chatName}}</p>
+    <div class="messages-list">
+      <div *ngFor="let msg of messages" class="message-item">
+        <span>{{ msg }}</span>
+      </div>
+    </div>
+  
+    <div class="media-upload">
+      <span *ngFor="let media of mediaList" class="media-item">{{ media }}</span>
+    </div>
+    
+    <div class="message-input-container">
+      <textarea 
+        [(ngModel)]="message" 
+        (keydown.enter)="sendMessage()" 
+        placeholder="Введите сообщение..."
+        class="message-input">
+      </textarea>
+      <button (click)="sendMessage()" class="send-button">Отправить</button>
+      <button (click)="addMedia()" class="add-media-button">+</button>
+    </div>
+  </div>

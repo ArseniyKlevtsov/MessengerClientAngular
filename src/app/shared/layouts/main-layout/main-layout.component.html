@@ -1,11 +1,11 @@
 <div class="main-container">
     <div class="sidebar">
       <app-tool-panel (optionSelected)="onOptionSelected($event)" (profileClicked)="onProfileClicked()"></app-tool-panel>
-      <app-chats-panel *ngIf="selectedOptionLeft === 'chats'"></app-chats-panel>
+      <app-chats-panel *ngIf="selectedOptionLeft === 'chats'" (contactChatClicked)="onContactChatClicked($event)"></app-chats-panel>
       <app-contacts *ngIf="selectedOptionLeft === 'contacts'" (addClicked)="onAddClicked()"></app-contacts>
     </div>
     <div class="content">
-      <app-chat *ngIf="selectedOptionRigth === 'chat'"></app-chat>
+      <app-chat *ngIf="selectedOptionRigth === 'chat'" [chatName]="contactChatName"></app-chat>
       <app-profile *ngIf="selectedOptionRigth === 'profile'"></app-profile>
       <app-add-contact *ngIf="selectedOptionRigth === 'addContact'"></app-add-contact>
       <app-create-group-chat *ngIf="selectedOptionRigth === 'createGroupChat'"></app-create-group-chat>

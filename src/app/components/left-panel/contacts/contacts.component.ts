@@ -35,6 +35,7 @@ export class ContactsComponent implements OnInit, OnDestroy {
 
     this.tryLoadContacts();
   }
+
   private tryLoadContacts(): void {
     if (this.websocketService.isConnected) {
       this.loadContacts();
@@ -61,8 +62,7 @@ export class ContactsComponent implements OnInit, OnDestroy {
   ContactsHandler(message: Message): void {
     const newContacts: ContactsResponseDto = message.Dto;
     this.contacts.Contacts = newContacts.Contacts;
-    console.log(this.contacts);
-}
+  }
 
   onAddClicked(): void {
     this.addClicked.emit();

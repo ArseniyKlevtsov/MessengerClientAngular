@@ -1,6 +1,7 @@
 import { Injectable, OnDestroy } from '@angular/core';
 import { Message } from '../interfaces/value-objects/message';
 import { Subject } from 'rxjs';
+import { AuthStorageService } from './auth-storage.service';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,7 @@ export class WebsocetMessengerService implements OnDestroy {
 
   public isConnected: boolean = false;
 
-  constructor() {
+  constructor(private authStorageService: AuthStorageService) {
     this.connect();
   }
 
@@ -35,6 +36,7 @@ export class WebsocetMessengerService implements OnDestroy {
     this.socket = new WebSocket(this.url);
 
     this.socket.onopen = (event) => {
+      this.Associate();
       console.log('Connected to WebSocket:', event);
       this.onOpen.next(event);
       this.isConnected = true;
@@ -56,6 +58,21 @@ export class WebsocetMessengerService implements OnDestroy {
       console.log('WebSocket closed:', event);
       this.onClose.next(event);
     };
+  }
+
+  public Associate() {
+    const authData = this.authStorageService.getAuthData();
+    if (authData == null) {
+      return;
+    }
+    const message: Message = {
+      Command: "Associate",
+      Dto: {
+        UserName: authData.username,
+        Password: authData.password,
+      }
+    };
+    this.sendMessage(message);
   }
 
   ngOnDestroy() {

@@ -1,1 +1,8 @@
-<p>chats-panel works!</p>
+<div>
+    <h2>Контакт-чаты</h2>
+    <div *ngFor="let chat of chats.Chats">
+        <div (click)="onChatClick(chat.Name)" class="chat-wrapper">
+            <app-chat-container [chat]="chat"></app-chat-container>
+        </div>
+    </div>
+</div>

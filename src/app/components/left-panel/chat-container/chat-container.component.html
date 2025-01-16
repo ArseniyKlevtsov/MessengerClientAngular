@@ -1,1 +1,19 @@
-<p>chat-container works!</p>
+<div class="chat-container">
+  <div class="chat-image">
+    <img *ngIf="chat.IconUrl; else noImage" [src]="chat.IconUrl" alt="{{ chat.Name }}" />
+    <ng-template #noImage>
+      <div class="placeholder"></div>
+    </ng-template>
+  </div>
+  <div class="chat-info">
+    <div class="chat-header">
+      <h5>{{ chat.Name }}</h5>
+      <span class="status">{{ chat.Status }}</span>
+    </div>
+    <div class="chat-footer">
+      <p class="last-message">{{ formatMessage(chat.LastMessage) }}</p>
+      <span class="message-status">{{ chat.MessageStatus }}</span>
+      <span class="sent-at">{{ formatTime(chat.SentAt) }}</span> <!-- Время отправки -->
+    </div>
+  </div>
+</div>
