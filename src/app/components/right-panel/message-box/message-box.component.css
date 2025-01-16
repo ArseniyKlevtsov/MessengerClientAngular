@@ -1,0 +1,53 @@
+.message-box-left {
+  background-color: #e0f7fa; /* Мягко голубой цвет */
+  border-radius: 8px;
+  padding: 10px;
+  margin: 5px 0;
+  position: relative;
+  max-width: 70%;
+  align-self: flex-start;
+  color: black; /* Цвет текста - черный */
+}
+
+.message-box-right {
+  background-color: #f1f1f1; /* Мягко темный цвет */
+  border-radius: 8px;
+  padding: 10px;
+  margin: 5px 0;
+  position: relative;
+  max-width: 70%;
+  align-self: flex-end;
+  color: black; /* Цвет текста - черный */
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.media-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px 0;
+}
+
+.media-item {
+  margin-right: 5px;
+}
+
+.media-image {
+  max-width: 100px; /* Максимальная ширина изображения */
+  max-height: 100px; /* Максимальная высота изображения */
+  border-radius: 4px;
+}
+
+.message-content {
+  margin-top: 5px;
+}
+
+.message-timestamp {
+  font-size: 0.8em;
+  color: gray; /* Цвет времени - серый */
+  text-align: right;
+}

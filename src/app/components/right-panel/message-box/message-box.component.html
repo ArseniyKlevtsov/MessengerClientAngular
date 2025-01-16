@@ -1,1 +1,20 @@
-<p>message-box works!</p>
+<div [ngClass]="{'message-box-left': isSenderMatch(), 'message-box-right': !isSenderMatch()}">
+    <div class="message-header">
+      <span class="sender-name">{{ Message.SenderName }}</span>
+      <span class="message-status">{{ Message.Status }} at {{ formatDate(Message.SentAt) }}</span>
+    </div>
+    
+    <div *ngIf="Message.HasMedia" class="media-container">
+      <div *ngFor="let url of Message.MediaUrls" class="media-item">
+        <img [src]="url" alt="Media" class="media-image" />
+      </div>
+    </div>
+  
+    <div class="message-content">
+      {{ Message.Content }}
+    </div>
+  
+    <div class="message-timestamp">
+      {{ formatDate(Message.SentAt) }}
+    </div>
+  </div>

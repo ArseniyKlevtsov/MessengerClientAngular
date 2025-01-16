@@ -1,6 +1,6 @@
 import { AuthStorageService } from './../../shared/services/auth-storage.service';
 import { NgIf } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { WebsocetMessengerService } from '../../shared/services/websocet-messenger.service';
@@ -14,7 +14,7 @@ import { Message } from '../../shared/interfaces/value-objects/message';
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit, OnDestroy {
   username: string = '';
   password: string = '';
   error: string = '';

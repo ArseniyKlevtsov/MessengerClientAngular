@@ -2,12 +2,8 @@
     <p>Чат: {{chatName}}</p>
     <div class="messages-list">
       <div *ngFor="let msg of messages" class="message-item">
-        <span>{{ msg }}</span>
+        <app-message-box [Message]="msg"></app-message-box>
       </div>
-    </div>
-  
-    <div class="media-upload">
-      <span *ngFor="let media of mediaList" class="media-item">{{ media }}</span>
     </div>
     
     <div class="message-input-container">

@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ToolPanelComponent } from '../../../components/left-panel/tool-panel/tool-panel.component';
 import { ChatsPanelComponent } from '../../../components/left-panel/chats-panel/chats-panel.component';
