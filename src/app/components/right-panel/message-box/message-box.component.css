@@ -1,5 +1,5 @@
 .message-box-left {
-  background-color: #e0f7fa; /* Мягко голубой цвет */
+  background-color: #dddbdd; /* Мягко темный цвет */
   border-radius: 8px;
   padding: 10px;
   margin: 5px 0;
@@ -7,17 +7,18 @@
   max-width: 70%;
   align-self: flex-start;
   color: black; /* Цвет текста - черный */
+
 }
 
 .message-box-right {
-  background-color: #f1f1f1; /* Мягко темный цвет */
+  background-color: #090909; /* Мягко голубой цвет */
   border-radius: 8px;
   padding: 10px;
   margin: 5px 0;
   position: relative;
   max-width: 70%;
   align-self: flex-end;
-  color: black; /* Цвет текста - черный */
+  color: rgb(255, 255, 255); /* Цвет текста - черный */
 }
 
 .message-header {

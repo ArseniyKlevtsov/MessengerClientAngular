@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, ViewChild} from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ToolPanelComponent } from '../../../components/left-panel/tool-panel/tool-panel.component';
 import { ChatsPanelComponent } from '../../../components/left-panel/chats-panel/chats-panel.component';
@@ -27,6 +27,8 @@ import { AddContactComponent } from '../../../components/right-panel/add-contact
   styleUrl: './main-layout.component.css'
 })
 export class MainLayoutComponent {
+  @ViewChild(ChatComponent) chatComponent!: ChatComponent;
+
   selectedOptionLeft: string = "chats";
   selectedOptionRigth: string = "profile";
 
@@ -49,5 +51,7 @@ export class MainLayoutComponent {
   onContactChatClicked(chatName: string): void {
     this.contactChatName = chatName;
     this.selectedOptionRigth = "chat";
+    this.chatComponent.messages = [];
+    this.chatComponent.tryLoadMessages();
   }
 }
